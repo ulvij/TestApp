@@ -17,13 +17,6 @@ dependencies {
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
 
-
-    //DI
-//    implementation "com.google.dagger:hilt-android:$daggerHiltAndroidVersion"
-//    implementation "androidx.hilt:hilt-common:$daggerHiltVersion"
-//    kapt "com.google.dagger:hilt-android-compiler:$daggerHiltAndroidVersion"
-//    kapt "androidx.hilt:hilt-compiler:$daggerHiltVersion"
-
     implementation "com.google.dagger:hilt-core:$daggerHiltAndroidVersion"
     kapt "com.google.dagger:hilt-compiler:$daggerHiltAndroidVersion" // or kapt
 
