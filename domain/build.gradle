@@ -1,0 +1,33 @@
+plugins {
+    id 'kotlin'
+    id 'kotlin-kapt'
+}
+
+ext {
+    daggerHiltAndroidVersion = "2.34.1-beta"
+    daggerHiltVersion = "1.0.0"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+
+
+    //DI
+//    implementation "com.google.dagger:hilt-android:$daggerHiltAndroidVersion"
+//    implementation "androidx.hilt:hilt-common:$daggerHiltVersion"
+//    kapt "com.google.dagger:hilt-android-compiler:$daggerHiltAndroidVersion"
+//    kapt "androidx.hilt:hilt-compiler:$daggerHiltVersion"
+
+    implementation "com.google.dagger:hilt-core:$daggerHiltAndroidVersion"
+    kapt "com.google.dagger:hilt-compiler:$daggerHiltAndroidVersion" // or kapt
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "io.mockk:mockk:1.10.2"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.0'
+}
