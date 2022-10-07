@@ -4,7 +4,7 @@ plugins {
 }
 
 ext {
-    daggerHiltAndroidVersion = "2.34.1-beta"
+    daggerHiltAndroidVersion = "2.44"
     daggerHiltVersion = "1.0.0"
 }
 
@@ -15,7 +15,7 @@ java {
 
 dependencies {
     // Coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
 
     implementation "com.google.dagger:hilt-core:$daggerHiltAndroidVersion"
     kapt "com.google.dagger:hilt-compiler:$daggerHiltAndroidVersion" // or kapt
