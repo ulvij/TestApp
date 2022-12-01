@@ -32,11 +32,8 @@ abstract class TvShowDatabase : RoomDatabase() {
             synchronized(this) {
                 INSTANCE?.let { return it }
 
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    TvShowDatabase::class.java,
-                    DB_NAME
-                )
+                val instance = Room
+                    .databaseBuilder(context.applicationContext, TvShowDatabase::class.java, DB_NAME)
                     .addTypeConverter(stringTypeConverter)
                     .addTypeConverter(intTypeConverter)
                     .fallbackToDestructiveMigration()

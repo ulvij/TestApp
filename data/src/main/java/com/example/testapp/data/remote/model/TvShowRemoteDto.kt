@@ -1,7 +1,5 @@
 package com.example.testapp.data.remote.model
 
-import com.squareup.moshi.Json
-
 data class TvShowRemoteDto(
     var poster_path: String?,
     var popularity: Double?,
